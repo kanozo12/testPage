@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+body {
+    background: #fafafa;
+}
+
+.m_text{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.s_text{
+    font-size: 12px;
+}
+
+#header {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.container {
+    width: 975px;
+    height: 77px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s;
+    padding: 0px 20px;
+}
+
+.logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.logo .main_logo span {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+}
+
+.logo .fire_icon {
+    position: relative;
+    margin-right: 30px;
+}
+
+.logo .fire_icon::after {
+    content: '';
+    width: 1px;
+    height: 28px;
+    background: #000;
+    position: absolute;
+    right: -15px;
+    top: 0px;
+    transition:all .5s;
+}
+
+.logo div {
+    vertical-align: middle;
+}
+
+#search-field {
+    width: 185px;
+    height: 28px;
+    background:#fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    padding:3px 30px;
+    color:#999;
+    font-weight: 400;
+    text-align: left;
+    font-size: 14px;
+    outline:none;
+}
+
+#search-field::placeholder {
+    font-size: 0;
+}
+
+#search-field:focus::placeholder {
+    font-size: 14px;
+}
+
+.search_box .fake_field {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    pointer-events: none;
+}
+
+#search-field:focus ~ .fake_field > span:nth-child(1){
+    transform:translateX(-105px);
+}
+
+
+#search-field:focus ~ .fake_field > span:nth-child(2){
+    display: none;
+}
+
+#header .right_icons{
+    width: 132px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+#main_section {
+    padding-top: 130px;
+    display: flex;
+    justify-content: center;
+}
+
+.main_container {
+    width: 935px;
+    position: relative;
+}
+
+.contents {
+    max-width: 614px;
+    border: 1px solid rgba(0,0,0,0.09);
+    border-radius: 3px;
+    margin-bottom: 60px;
+    background: white;
+}
+
+.contents .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.contents .top .profile_img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.contents .top .profile_img img {
+    width: 100%;
+}
+
+.contents .top .user_container {
+    display: flex;
+}
+
+.contents .top .user_container {
+    position: relative;
+}
+
+/* drop-down 메뉴 자바스크립트로 나중에 구현 */
+/* .contents .more_icon.on .toggle.box {
+    display: block;
+}
+
+.contents .toggle_box > li{
+    padding: 5px 10px;
+    background: white;
+}
+
+.contents .toggle_box > li input {
+    border: none;
+    font-size: inherit;
+}
+ */
+
+ /* content 내용 */
+ .contents .img_section {
+     overflow: hidden;
+ }
+
+ .contents .img_section img {
+    width: 100%;
+}
+
+.contents .bottom_icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 25px;
+}
+
+.contents .bottom_icon .left_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents .bottom_icon .left_icon > div {
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.contents .bottom_icon .right_icon{
+    cursor: pointer;
+}
+
+.contents .likes {
+    padding: 5px 20px;;
+    color: #262626;
+}
+
+.contents .comment_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.contents .comment_container .comment {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.contents .comment_container .comment-detail {
+    display: flex;
+}
+
+.contents .comment_container .comment .nick_name {
+    margin-right: 10px;
+}
+
+.contents .timer{
+    font-size: 10px;
+    color:#999;
+    border-bottom: 1px solid rgba(0,0,0,0.09);
+    padding: 10px 20px;
+}
+
+.contents .comment_field{
+    min-height:56px;
+    padding: 0 20px;
+    position: relative;
+}
+
+
+.contents .comment_field input{
+    width: 100%;
+    height: 56px;
+    border: none;
+    outline:none;
+    background: transparent;
+}
+
+.contents .comment_field input:focus ~ .upload_btn{
+    pointer-events: initial;
+    opacity: 1;
+}
+
+.contents .comment_field .upload_btn{
+    color:#3897f0;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform:translateY(-50%);
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.side_box {
+    width: 293px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.side_box.on {
+    position: fixed;
+    top: 80px;
+}
+
+.side_box .profile_thum {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-bottom: 12px;
+}
+
+.side_box .profile_thum img {
+    width: 100%;
+    height: 100%;
+}
+
+.side_box .user_profile {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #262626;
+}
+
+.side_box .detail .uid {
+    margin-bottom: 5px;
+}
+
+.side_box .detail .uname {
+    font-size: 12px;
+    color: #999;
+}
+
+.side_box > .story {
+    border: 1px solid rgba(0,0,0,0.09);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 291px;
+    font-size: 14px;
+    color: #262626;
+    font-weight: bold;
+    background: white;
+}
+
+.side_box > .story > .story_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    color: #999;
+}
+
+.side_box > .story > .story_header .more {
+    font-size: 12px;
+    color: #262626;
+    cursor: pointer;
+}
+
+.side_box > .recommend {
+    border: 1px solid rgba(0,0,0,0.09);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 291px;
+    font-size: 14px;
+    color: #262626;
+    font-weight: bold;
+    background: white;
+}
+
+.side_box > .recommend > .reco_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    color: #999;
+}
+
+.side_box > .recommend > .reco_header .more {
+    font-size: 12px;
+    color: #262626;
+    cursor: pointer;
+}
+
+.thum_user {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.thum_user .profile_thum {
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+}
+
+.thum_user .time {
+    font-size: 10px;
+    letter-spacing: 0.2px;
+    color:#999;
+}
+
+.side_box .scroll_container{
+    height: 182px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
