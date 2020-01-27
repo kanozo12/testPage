@@ -29,7 +29,7 @@ body {
 }
 
 .container {
-    width: 975px;
+    width: 935px;
     height: 77px;
     margin: 0 auto;
     display: flex;
@@ -43,18 +43,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 27.5px;
 }
 
-.logo .main_logo span {
-    font-size: 25px;
-    font-weight: bold;
-    font-family: 'Dancing Script', cursive;
+.logo a:active {
+    color: #939393;
+}
+
+.logo .main_logo {
+    width: 115px;
+    height: auto;
+    padding-top: 10px;
+}
+
+.logo .main_logo img {
+    width: 100%;
+    height: 100%;
+
 }
 
 .logo .fire_icon {
     position: relative;
     margin-right: 30px;
+    padding-right: 5px;
 }
 
 .logo .fire_icon::after {
@@ -64,7 +75,7 @@ body {
     background: #000;
     position: absolute;
     right: -15px;
-    top: 0px;
+    top: 1px;
     transition:all .5s;
 }
 
